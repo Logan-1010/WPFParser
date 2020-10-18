@@ -1,0 +1,86 @@
+﻿<Window x:Class="WPFParser.Tools.ToolMainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFParser.Tools"
+        mc:Ignorable="d"
+        Title="WPF-Parser"
+        WindowStyle="SingleBorderWindow"
+         SizeToContent="WidthAndHeight">
+
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                
+                <!--  Note: Various Language Dictionaries can be added -->
+                <ResourceDictionary Source="pack://application:,,,/WPFParser;component/Resources/Language/Deutsch.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+        </ResourceDictionary>
+
+    </Window.Resources>
+    <Grid>
+        <StackPanel>            
+                <Button
+                    Margin="10"
+                    Height="40"
+                    Width="150"
+                    HorizontalAlignment="Left"
+                    Content="{StaticResource btnParseTxt}"
+                    Command="{Binding IParse}">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+
+                </Button>
+
+            <WrapPanel>
+
+                <TextBox                     
+                    Margin="10"
+                Height="50"
+                Width="300"
+                FontSize="18"
+                TextWrapping="Wrap"                        
+                    ScrollViewer.CanContentScroll="True"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    Text="{Binding IOutput, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <Button
+                    Margin="10"
+                    Height="40"
+                    Width="150"
+                    IsEnabled="{Binding IParseButtonEnabler}"
+                    Content="{StaticResource btnCreateGraphic}"
+                    Command="{Binding IGraphic}">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+
+                </Button>
+
+                <Button
+                    Margin="10"
+                    Height="30"
+                    Width="100"
+                    Content="{StaticResource btnClear}"
+                    Command="{Binding IClear}">
+                    <Button.Effect>
+                        <DropShadowEffect/>
+                    </Button.Effect>
+
+                </Button>
+
+            </WrapPanel>
+
+            <WrapPanel x:Name="OutputArea"
+                       Margin="10"                      
+                       Width="500"
+                       Grid.IsSharedSizeScope="True"
+                       MaxWidth="500" >
+            </WrapPanel>
+            
+        </StackPanel>
+    </Grid>
+</Window>

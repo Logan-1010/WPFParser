@@ -1,0 +1,8 @@
+C:\LOGAN\WPFParser\WPFParser\ProjectStandard\bin\Debug\ProjectStandard.dll.config
+C:\LOGAN\WPFParser\WPFParser\ProjectStandard\bin\Debug\ProjectStandard.dll
+C:\LOGAN\WPFParser\WPFParser\ProjectStandard\bin\Debug\ProjectStandard.pdb
+C:\LOGAN\WPFParser\WPFParser\ProjectStandard\obj\Debug\ProjectStandard.Properties.Resources.resources
+C:\LOGAN\WPFParser\WPFParser\ProjectStandard\obj\Debug\ProjectStandard.csproj.GenerateResource.cache
+C:\LOGAN\WPFParser\WPFParser\ProjectStandard\obj\Debug\ProjectStandard.dll
+C:\LOGAN\WPFParser\WPFParser\ProjectStandard\obj\Debug\ProjectStandard.pdb
+C:\LOGAN\WPFParser\WPFParser\ProjectStandard\obj\Debug\ProjectStandard.csprojAssemblyReference.cache
